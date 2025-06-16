@@ -1,45 +1,49 @@
-🧠 Image Captioning & Tagging Tool (with EXIF Metadata Embedding)
+🧠 Image Captioning & Tagging Tool
 
-This Python tool batch-generates captions and keyword tags for images using a locally hosted vision-language model (e.g., BakLLaVA in LM Studio). The captions and tags are embedded directly into each image’s EXIF metadata so that Windows and other software can read them natively.
+Batch-generate captions and keyword tags for JPG/PNG images using a local model like BakLLaVA (via LM Studio). Captions and tags are embedded into EXIF metadata so they show up in Windows Explorer.
+✅ Features
 
-    ✅ Works with JPG and PNG
-    ✅ Saves to ImageDescription and XPKeywords (Windows Tags)
-    ✅ Supports LM Studio or other OpenAI-compatible local endpoints
+    Auto caption (max 100 characters)
 
-✨ Features
-    🔎 Auto captioning (max 100 chars)
-    🏷️ Keyword tag generation (7–10 tags)
-    💾 Embeds into EXIF metadata:
-        ImageDescription → Title (Windows)
-        XPKeywords → Tags (Windows)
-    🧠 Works with BakLLaVA, LLaVA, etc.
-    📁 GUI folder picker
-    📊 Batch processing with retries
-    📃 Generates processing log/report
-🖥️ Requirements
+    7–10 keyword tags
+
+    Tags saved to XPKeywords (Windows “Tags”)
+
+    Captions saved to ImageDescription (Windows “Title”)
+
+    JPG & PNG support
+
+    GUI folder picker
+
+    Batch processing + retry logic
+
+    Creates metadata_report.txt
+
+💻 Requirements
+
     Python 3.8+
+
     pip install pillow aiohttp tqdm
 
-You must run a compatible local model API (like LM Studio) at:
-http://localhost:1234/v1/chat/completions
+    A local model API (e.g. LM Studio at: http://localhost:1234/v1/chat/completions)
 
-🚀 Usage
+🚀 How to Use
 
-    Start your model (LM Studio or similar)
-    Run the script:
-    python ImageCaptioner.py
-    Select a folder of images
-    Captions and tags will be embedded into each image
-    View results in Windows File Explorer (enable Tags/Title columns)
+python ImageCaptioner.py
 
-📝 Output
+    Start LM Studio (BakLLaVA model)
 
-A metadata_report.txt file will be created in the same folder, showing processing results for each image.
+    Run the script
 
-🔧 Configuration
+    Pick a folder of images
 
-You can customize prompts, model endpoint, tag limits, JPEG quality, and more by editing the CONFIG section at the top of the script.
+    Captions/tags will be added to EXIF
 
+    View tags and titles in Windows Explorer
+
+⚙️ Customization
+
+Edit the CONFIG section in the script to change prompts, limits, model settings, etc.
 📄 License
 
-MIT — free to use, modify, and distribute.
+MIT – free to use and modify.
