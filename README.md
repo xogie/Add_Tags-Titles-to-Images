@@ -1,6 +1,7 @@
 🧠 Image Captioning & Tagging Tool
 
 Batch-generate captions and keyword tags for JPG/PNG images using a local model like BakLLaVA (via LM Studio). Captions and tags are embedded into EXIF metadata so they show up in Windows Explorer.
+
 ✅ Features
 
     Auto caption (max 100 characters)
