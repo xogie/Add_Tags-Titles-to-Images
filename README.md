@@ -48,3 +48,6 @@ Edit the CONFIG section in the script to change prompts, limits, model settings,
 📄 License
 
 MIT – free to use and modify.
+
+![image](https://github.com/user-attachments/assets/71fad027-4f70-41ee-89f1-a8477cbd4a7a)
+
